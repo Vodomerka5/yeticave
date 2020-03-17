@@ -37,7 +37,7 @@ $user_name = 'Valeria'; // укажите здесь ваше имя
                 <img src="img/user.jpg" width="40" htight="40" alt="Пользователь">
                 </div>
                 <div class="user-menu__logged">
-                <p><?php $user_name ?> </p>
+                <p><?php print"$user_name"; ?></p>
                 </div>
             <?php
             }
