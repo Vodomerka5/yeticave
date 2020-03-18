@@ -1,7 +1,5 @@
 <?php
 $is_auth = rand(0, 1);
-
-$user_name = ''; // укажите здесь ваше имя
 $user_name = 'Valeria'; // укажите здесь ваше имя
 
  $categorii = array("boards" => "Доски и лыжи", "attachment" => "Крепления", "boots" => "Ботинки", "clothing" => "Одежда", "tools" => "Инструменты", "other" => "Разное"); 
@@ -47,7 +45,7 @@ $user_name = 'Valeria'; // укажите здесь ваше имя
                 <img src="img/user.jpg" width="40" htight="40" alt="Пользователь">
                 </div>
                 <div class="user-menu__logged">
-                <p><?php print"$user_name"; ?></p>
+                <p><?php=$user_name?></p>
                 </div>
             <?php
             }
