@@ -10,6 +10,19 @@ $user_name = 'Valeria'; // укажите здесь ваше имя
             array("name" => "Ботинки для сноуборда DC Mutiny Charocal", "category" => "Ботинки", "cost" => 10999, "src" => "img/lot-4.jpg"),
             array("name" => "Куртка для сноуборда DC Mutiny Charocal", "category" => "Одежда", "cost" => 7500, "src" => "img/lot-5.jpg"),
             array("name" => "Маска Oakley Canopy", "category" => "Разное", "cost" => 5400, "src" => "img/lot-6.jpg"));
+
+        $rubl = true; //Вывод рубля
+    function price ($q,$e)
+    {  
+     $q = ceil($q);
+        if($e == true)
+        { $b = '<p class="rub">р</p>'; }
+        else { $b = ''; }
+        if($q < 1000)
+        { return $q . $b; }
+        else { return number_format($q, 0, " ", " ") . $b; }     
+    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -45,7 +58,7 @@ $user_name = 'Valeria'; // укажите здесь ваше имя
                 <img src="img/user.jpg" width="40" htight="40" alt="Пользователь">
                 </div>
                 <div class="user-menu__logged">
-                <p><?php=$user_name?></p>
+                <p><?=$user_name?></p>
                 </div>
             <?php
             }
@@ -105,7 +118,7 @@ $user_name = 'Valeria'; // укажите здесь ваше имя
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$znach['cost']?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?=price($znach['cost'],$rubl);?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
