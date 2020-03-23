@@ -38,7 +38,7 @@
                             <span class="lot__cost"><?=price($znach['cost'],$rub_visible);?></span>
                         </div>
                         <div class="lot__timer timer">
-                            12:23
+                            <?=vremya()?>
                         </div>
                     </div>
                 </div>

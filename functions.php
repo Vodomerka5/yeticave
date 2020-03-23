@@ -41,4 +41,16 @@ function include_template($name, $data)
     return $result;
 }
 
+
+function vremya()
+{
+    $now = strtotime("now");
+    $tomorrow = strtotime("tomorrow");
+    $raznica = $tomorrow - $now;
+    $chasi = floor($raznica/3600);
+    $min = floor(((($raznica/3600) - $chasi) * 3600)/60);
+    $res = sprintf("%02d:%02d", $chasi, $min);
+    return $res; 
+}
+
 ?>
