@@ -18,7 +18,7 @@ CREATE TABLE `categories` (
 CREATE TABLE `lots` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `description` text NOT NULL,
+  `description` text NULL,
   `date_create` datetime NOT NULL,
   `start_price` decimal(10,0) NOT NULL,
   `image_url` varchar(100) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE `users` (
   `username` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `avatar` varchar(100) NOT NULL,
+  `avatar` varchar(100) NULL,
   `reg_date` datetime NOT NULL,
   `contacts` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
