@@ -26,8 +26,8 @@ CREATE TABLE `lots` (
   `bet_step` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
-  `winner_id` int(11) NOT NULL,
-  `bet_price` int(11) NOT NULL
+  `winner_id` int(11),
+  `bet_price` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Cоздание таблицы users
